@@ -1,0 +1,32 @@
+/* El "body" original pasa a ser el contenedor del slide */
+.slide1 {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  overflow: hidden;
+}
+
+.slide1__illusion {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle,
+    #fff 0px,
+    #fff 10px,
+    #000 10px,
+    #000 20px
+  );
+  animation: slide1-spin 8s linear infinite;
+}
+
+@keyframes slide1-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
