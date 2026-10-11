@@ -1,0 +1,35 @@
+.estudiante {
+  position: relative;
+  overflow: hidden;
+}
+
+.estudiante__nombre {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px 16px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 1.00rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.estudiante:hover .estudiante__nombre {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .estudiante__nombre {
+    transition: opacity 0.2s;
+    transform: none;
+  }
+}

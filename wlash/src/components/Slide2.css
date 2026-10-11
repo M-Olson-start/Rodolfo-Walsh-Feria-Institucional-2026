@@ -1,0 +1,101 @@
+/* Reset limitado a este slide (antes era * global) */
+.slide2,
+.slide2 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* El "body" original pasa a ser el contenedor del slide */
+.slide2 {
+  background: #080808;
+  color: white;
+  height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.slide2__titulo {
+  margin-bottom: 30px;
+  color: #00ffff;
+  text-shadow: 0 0 15px cyan;
+}
+
+.slide2__ilusion {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide2-girar 8s linear infinite;
+}
+
+.slide2__circulo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 8px dashed #00ffff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px cyan;
+}
+
+.slide2__circulo:nth-child(2) {
+  width: 80%;
+  height: 80%;
+  border-color: #ff00ff;
+  border-style: dotted;
+  animation: slide2-girar 5s linear infinite reverse;
+}
+
+.slide2__circulo:nth-child(3) {
+  width: 60%;
+  height: 60%;
+  border-color: #ffff00;
+  border-width: 6px;
+  animation: slide2-girar 3s linear infinite;
+}
+
+.slide2__circulo:nth-child(4) {
+  width: 40%;
+  height: 40%;
+  border-color: white;
+  border-style: dashed;
+  animation: slide2-girar 2s linear infinite reverse;
+}
+
+.slide2__centro {
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 25px white;
+  z-index: 2;
+}
+
+.slide2__texto {
+  margin-top: 35px;
+  color: #ccc;
+  text-align: center;
+  padding: 0 15px;
+}
+
+@keyframes slide2-girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 400px) {
+  .slide2__ilusion {
+    width: 260px;
+    height: 260px;
+  }
+}
