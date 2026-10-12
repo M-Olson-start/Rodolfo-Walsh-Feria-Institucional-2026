@@ -1,5 +1,4 @@
-/* Imagen3.css */
-.container {
+.slide100 {
   width: 100%;
   max-width: 95%;
   margin: 0 auto;
@@ -13,7 +12,7 @@
   text-align: left;
 }
 
-.card {
+.slide100__card {
   background-color: #1e1e1e;
   border-radius: 10px;
   padding: 24px 32px;
@@ -23,15 +22,15 @@
   overflow: auto; /* para que la card "abrace" el float de adentro */
 }
 
-.card h2 {
-  color: #530442;
+.slide100__titulo {
+  color: #b266d9; /* violeta claro, se lee bien sobre fondo oscuro */
   border-bottom: 1px solid #333;
   padding-bottom: 10px;
   text-align: center;
   margin-top: 0;
 }
 
-.hermann-wrapper {
+.slide100__rejilla {
   background-color: #ffffff;
   display: grid;
   grid-template-columns: repeat(6, 40px);
@@ -43,10 +42,31 @@
   margin: 0 24px 16px 0;
 }
 
-.box {
+.slide100__caja {
   background-color: #000000;
 }
 
-.card p {
+.slide100__card p {
   margin: 0 0 16px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .slide100 {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  .slide100__card {
+    padding: 16px;
+  }
+
+  .slide100__rejilla {
+    float: none;
+    width: fit-content;
+    margin: 0 auto 16px auto;
+    grid-template-columns: repeat(6, 34px);
+    grid-template-rows: repeat(6, 34px);
+    gap: 6px;
+  }
 }

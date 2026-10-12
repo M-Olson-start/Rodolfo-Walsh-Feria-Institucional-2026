@@ -52,3 +52,10 @@
     transform: rotate(360deg);
   }
 }
+
+/* Responsive: reduce la ilusión completa en pantallas chicas */
+@media (max-width: 480px) {
+  .slide4__escala {
+    transform: scale(0.7);
+  }
+}

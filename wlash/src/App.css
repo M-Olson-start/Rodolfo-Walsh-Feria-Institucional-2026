@@ -52,11 +52,35 @@ body {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  border-radius: 10%;
+  border-radius: 50%;
   object-fit: cover;
-  border: 1px solid var(--accent-green);
+  border: 2px solid var(--accent-green);
 }
 
 .marco__contenido {
   padding: 16px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .marco {
+    margin: 8px;
+    border-radius: 12px;
+  }
+
+  .marco__contenido {
+    padding: 8px;
+  }
+
+  .school-top-bar {
+    padding: 8px 12px;
+  }
+
+  .school-info h4 {
+    font-size: 0.95em;
+  }
+
+  .school-info span {
+    font-size: 0.75em;
+  }
 }
