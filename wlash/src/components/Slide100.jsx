@@ -6,9 +6,9 @@ export default function Slide100() {
       <div className="card">
         <h2>La Rejilla de Hermann</h2>
 
-        <div className="hermann-wrapper">
+        <div className="slide100__rejilla">
           {Array.from({ length: 36 }).map((_, n) => (
-            <div className="box" key={n} />
+            <div className="slide100__caja" key={n} />
           ))}
         </div>
 
