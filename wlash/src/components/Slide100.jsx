@@ -4,7 +4,7 @@ export default function Slide100() {
   return (
     <div className="container">
       <div className="card">
-        <h2>1. La Rejilla de Hermann</h2>
+        <h2>La Rejilla de Hermann</h2>
 
         <div className="hermann-wrapper">
           {Array.from({ length: 36 }).map((_, n) => (
