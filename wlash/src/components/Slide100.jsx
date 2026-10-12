@@ -2,9 +2,9 @@ import "./Slide100.css";
 
 export default function Slide100() {
   return (
-    <div className="container">
-      <div className="card">
-        <h2>La Rejilla de Hermann</h2>
+    <div className="slide100">
+      <div className="slide100__card">
+        <h2 className="slide100__titulo">La Rejilla de Hermann</h2>
 
         <div className="slide100__rejilla">
           {Array.from({ length: 36 }).map((_, n) => (
