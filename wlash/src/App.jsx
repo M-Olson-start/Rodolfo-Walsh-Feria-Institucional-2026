@@ -1,3 +1,6 @@
+import "./App.css";
+import walshImg from "./assets/walsh.png"; // ajusta el nombre y la ruta de tu imagen
+
 import Carousel from "./components/Carousel";
 import SlideEstudiante from "./components/SlideEstudiante";
 import Slide0 from "./components/Slide0";
@@ -9,35 +12,41 @@ import Slide100 from "./components/Slide100";
 import Slide101 from "./components/Slide101";
 import Slide102 from "./components/Slide102";
 
-
 export default function App() {
   return (
-    <Carousel>
-      
-        <Slide100 />
-     
-      
-        <Slide101 />
-    
-     
-        <Slide102 />
-      
-        <Slide0 />
-  
-      <SlideEstudiante nombre="Santino Villagran">
-        <Slide1 />
-      </SlideEstudiante>
+    <div className="marco">
+      <header className="school-top-bar">
+        <div className="school-info">
+          <h4>E.E.S Nº 9 Rodolfo Walsh</h4>
+          <span>Ilusiones Ópticas . Explorando la percepción y la memoria • Proyecto NTICx</span>
+        </div>
+        <img src={walshImg} alt="Rodolfo Walsh" className="school-logo-img" />
+      </header>
 
-      <SlideEstudiante nombre="Jeremias Cueliche">
-        <Slide2 />
-      </SlideEstudiante>
+      <div className="marco__contenido">
+        <Carousel>
+          <Slide100 />
+          <Slide101 />
+          <Slide102 />
+          <Slide0 />
 
-      <SlideEstudiante nombre="Delfina Girard / Geronimo Sanabria">
-        <Slide3 />
-      </SlideEstudiante>
-      <SlideEstudiante nombre="Antonella Cañete">
-              <Slide4 />
-            </SlideEstudiante>
-    </Carousel>
+          <SlideEstudiante nombre="Santino Villagran">
+            <Slide1 />
+          </SlideEstudiante>
+
+          <SlideEstudiante nombre="Jeremias Cueliche">
+            <Slide2 />
+          </SlideEstudiante>
+
+          <SlideEstudiante nombre="Delfina Girard / Geronimo Sanabria">
+            <Slide3 />
+          </SlideEstudiante>
+
+          <SlideEstudiante nombre="Antonella Cañete">
+            <Slide4 />
+          </SlideEstudiante>
+        </Carousel>
+      </div>
+    </div>
   );
 }
